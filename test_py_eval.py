@@ -97,6 +97,7 @@ def test_is_flush():
     result = ev.is_flush(cards, pairness, suitness)
     assert result == (False, 0)
 
+
 def test_is_quad():
     # ev = Evaluator()
     #

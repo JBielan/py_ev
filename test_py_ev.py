@@ -1,4 +1,4 @@
-from py_eval import Evaluator
+from py_ev.py_ev import Evaluator
 
 ev = Evaluator()
 
@@ -287,7 +287,7 @@ def test_evaluate():
     ev = Evaluator()
 
     assert ev.evaluate([(3, 2), (3, 3)], [(3, 4), (10, 1), (12, 3), (14, 1), (6, 4)]) > \
-        ev.evaluate([(10, 2), (12, 4)], [(3, 4), (10, 1), (12, 3), (14, 1), (6, 4)])
+           ev.evaluate([(10, 2), (12, 4)], [(3, 4), (10, 1), (12, 3), (14, 1), (6, 4)])
 
     assert ev.evaluate([(3, 2), (3, 3)], [(3, 4), (10, 1), (12, 3), (14, 1), (6, 4)]) > \
            ev.evaluate([(14, 2), (13, 4)], [(12, 4), (11, 1), (9, 3), (8, 1), (7, 4)])

@@ -270,6 +270,7 @@ class Evaluator:
         print('Cards 2: {:.2f}%'.format(percentage_2))
         print('Draw: {:.2f}%'.format(percentage_draw))
 
+
 # ev = Evaluator()
 #
 # ev.equity(5000000, [(2, 3), (3, 2)], [(3, 3), (4, 2)])

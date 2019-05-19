@@ -5,6 +5,8 @@ python:
 install:
   - pip install pytest-cov
 # command to run tests
+env:
+    - CODECOV_TOKEN=<c0f8e244-ce0a-431b-a5ce-2a8a8a2faf48>
 script:
   - python -m pytest --cov=py_ev
 after_success:

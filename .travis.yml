@@ -1,4 +1,3 @@
-CODECOV_TOKEN="c0f8e244-ce0a-431b-a5ce-2a8a8a2faf48"
 language: python
 python:
   - "3.6"

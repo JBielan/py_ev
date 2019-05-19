@@ -1,7 +1,5 @@
 import random
 from sys import stdout
-from time import sleep
-
 
 class Evaluator:
     def __init__(self):

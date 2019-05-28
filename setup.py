@@ -3,7 +3,7 @@ from os import path
 
 DIR = path.dirname(path.abspath(__file__))
 
-with open(path.join(DIR, 'README.md')) as f:
+with open(path.join(DIR, 'PyPi_README.rst')) as f:
     README = f.read()
 
 setup(
@@ -11,8 +11,9 @@ setup(
     packages=['py_ev'],
     description="Poker hand evaluator written and tested in Python",
     long_description=README,
+    description_content_type='text/markdown',
     long_description_content_type='text/markdown',
-    version='0.0.2',
+    version='0.0.7',
     url='https://github.com/JBielan/py_ev',
     author='Jakub Bielan',
     author_email='jkbielan@gmail.com',

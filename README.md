@@ -20,17 +20,15 @@ ev = Evaluator()
 - Evaluator
   - evaluate() 
   ```python
-  ev.evaluate([(3, 3), (3, 2)], [(2, 2), (11, 3), (3, 4), (10, 2), (7, 3)])
+  print(ev.evaluate([(3, 3), (3, 2)], [(2, 2), (11, 3), (3, 4), (10, 2), (7, 3)]))
   # prints 4000420
   ```
   
   - equity()
   ```python
-  ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)])
-  # prints:
-  # Cards 1: 20.20%
-  # Cards 2: 30.77%
-  # Draw: 49.03%
+  print(ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)]))
+  # prints (20.28, 30.8, 48.93)
+  # Function returns a tuple: (cards_1_won, cards_2_won, draw)
   ```
   
 ## Future development

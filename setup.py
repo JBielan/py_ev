@@ -12,7 +12,7 @@ setup(
     description="Poker hand evaluator written and tested in Python",
     long_description=README,
     long_description_content_type='text/markdown',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/JBielan/py_ev',
     author='Jakub Bielan',
     author_email='jkbielan@gmail.com',

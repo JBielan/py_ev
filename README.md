@@ -27,6 +27,7 @@ ev = Evaluator()
   - equity()
   ```python
   print(ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)]))
+  # 100000 hands evaluated
   # prints (20.28, 30.8, 48.93)
   # Function returns a tuple: (cards_1_won, cards_2_won, draw)
   ```

@@ -266,7 +266,7 @@ class Evaluator:
         percentage_2 = won_2 / n * 100
         percentage_draw = draw / n * 100
 
-        print('Cards 1: {:.2f}%'.format(percentage_1))
+        print('\n\nCards 1: {:.2f}%'.format(percentage_1))
         print('Cards 2: {:.2f}%'.format(percentage_2))
         print('Draw: {:.2f}%'.format(percentage_draw))
 

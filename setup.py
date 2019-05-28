@@ -16,11 +16,10 @@ setup(
     url='https://github.com/JBielan/py_ev',
     author='Jakub Bielan',
     author_email='jkbielan@gmail.com',
-    keywords=['poker', 'hand-evaluator', 'texas-holdem', 'omaha', '6-plus'],
+    keywords=['poker', 'hand-evaluator', 'texas-holdem', 'omaha', '6-plus', 'evaluator'],
     tests_require=[
         'pytest',
-        'pytest-cov',
-        'pytest-sugar'
+        'pytest-cov'
     ],
     python_requires='>=3'
 )

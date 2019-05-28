@@ -207,14 +207,14 @@ class Evaluator:
         cards, pairness, suitness = ev.analyze_board(holecards, board)
 
         for function in functions:
-            rank, kickers, name = function(cards, pairness, suitness)
+            rank, kickers, strength = function(cards, pairness, suitness)
             if rank:
                 if ranking and not name:
                     return rank * 1000000 + kickers
                 elif ranking and name:
-                    return rank * 1000000 + kickers, name
+                    return rank * 1000000 + kickers, strength
                 elif name and not ranking:
-                    return name
+                    return strength
 
     def equity(self, n, holecards_1, holecards_2, default_board=[]):
         functions = [self.is_str8_flush, self.is_quad, self.is_fullhouse, self.is_flush, self.is_str8,
@@ -262,15 +262,18 @@ class Evaluator:
                 stdout.write("\r%d hands evaluated" % hand_number)
                 stdout.flush()
 
-        percentage_1 = won_1 / n * 100
-        percentage_2 = won_2 / n * 100
-        percentage_draw = draw / n * 100
+        print()
+        percentage_1 = round(won_1 / n * 100, 2)
+        percentage_2 = round(won_2 / n * 100, 2)
+        percentage_draw = round(draw / n * 100, 2)
 
-        print('\n\nCards 1: {:.2f}%'.format(percentage_1))
-        print('Cards 2: {:.2f}%'.format(percentage_2))
-        print('Draw: {:.2f}%'.format(percentage_draw))
+        # print('\n\nCards 1: {:.2f}%'.format(percentage_1))
+        # print('Cards 2: {:.2f}%'.format(percentage_2))
+        # print('Draw: {:.2f}%'.format(percentage_draw))
+
+        return percentage_1, percentage_2, percentage_draw
 
 
-# ev = Evaluator()
-#
-# ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)])
+ev = Evaluator()
+print(ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)]))
+# print(ev.evaluate( [(3, 3), (3, 2)], [(2, 2), (11, 3), (3, 4), (10, 2), (7, 3)] ))

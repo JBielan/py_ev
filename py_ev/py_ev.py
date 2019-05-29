@@ -273,7 +273,8 @@ class Evaluator:
 
         return percentage_1, percentage_2, percentage_draw
 
+# For tests:
 
-ev = Evaluator()
-print(ev.equity(100000, [(2, 3), (3, 2)], [(3, 3), (4, 2)]))
+# ev = Evaluator()
+# print(ev.equity(1000000, [(14, 4), (14, 2)], [(8, 3), (9, 3)]))
 # print(ev.evaluate( [(3, 3), (3, 2)], [(2, 2), (11, 3), (3, 4), (10, 2), (7, 3)] ))
